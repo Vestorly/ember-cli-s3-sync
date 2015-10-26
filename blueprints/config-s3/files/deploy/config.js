@@ -1,6 +1,9 @@
 'use strict';
 // this is your config! have fun with it.
 
+var MAXRETRY = 0;
+var TIMEOUT = 1800000;
+
 var developmentConfig = {
   environment: 'development',
   promptCredFile: false,
@@ -12,7 +15,8 @@ var developmentConfig = {
    */
   options: {
     region: 'us-east-1',
-    maxRetries: 2,
+    maxRetries: MAXRETRY,
+    timeOut: TIMEOUT,
     sslEnabled: true,
     params: {
       Bucket: 'ember-cli-deploy-test'
