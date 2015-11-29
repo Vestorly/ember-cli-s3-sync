@@ -112,7 +112,7 @@ var productionConfig = {
   options: developmentConfig.options
 };
 
-var configs: {
+var configs = {
   development: developmentConfig,
   production: productionConfig
 };
