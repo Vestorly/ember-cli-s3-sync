@@ -133,8 +133,8 @@ module.exports = function configFile(name, environment) {
 
   if (!configuration && environment) {
     for (var key in configs) {
-      if (config[key]['environment'] === environment) {
-        configuration = config[key];
+      if (configs[key]['environment'] === environment) {
+        configuration = configs[key];
       }
     }
   }
