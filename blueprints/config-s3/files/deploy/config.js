@@ -107,13 +107,37 @@ var developmentConfig = {
 
 };
 
+var productionConfig = {
+  environment: 'production',
+  options: developmentConfig.options
+};
+
+var configs = {
+  development: developmentConfig,
+  production: productionConfig
+};
+
 /**
- *
- *  `--environment` argument gets passed in as `env`.
- *  Default is 'development'
- *
- */
-module.exports = function(env) {
-  env = env || 'development';
-  return (env === 'development') ? developmentConfig : productionConfig;
+  config param takes precedence over environment.
+
+  @method configFile
+  @params {String} config Comes from --config
+  @params {String} environment Comes from --environment
+*/
+module.exports = function configFile(name, environment) {
+  var configuration;
+
+  if (name) {
+    configuration = configs[name];
+  }
+
+  if (!configuration && environment) {
+    for (var key in configs) {
+      if (configs[key]['environment'] === environment) {
+        configuration = configs[key];
+      }
+    }
+  }
+
+  return configuration;
 }

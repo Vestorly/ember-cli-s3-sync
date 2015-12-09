@@ -37,7 +37,7 @@ This addon uses [`aws-sdk`](https://github.com/aws/aws-sdk-js) for communicating
   - this will build development version of your app and prompt you for `awsKey`, `awsSecret`, and `awsBucket`
 
 possible cli arguments:
-  - `environment` (optional. uses app's default. Passed into *deployl/config.js*)
+  - `environment` (optional. uses app's default. Passed into *deploy/config.js*)
   - `output-path` (optional. uses app's default `/dist`)
   - `aws-key` (required. will prompt if not found)
   - `aws-secret` (required. will prompt if not found)

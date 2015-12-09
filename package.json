@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-s3-sync",
-  "version": "0.0.12",
+  "version": "0.0.12-beta.1",
   "private": false,
   "directories": {
     "doc": "doc",
@@ -46,7 +46,7 @@
     }
   },
   "dependencies": {
-    "aws-sdk": "2.2.11",
+    "aws-sdk": "2.0.19",
     "chalk": "0.5.1",
     "core-object": "0.0.2",
     "dargs": "2.1.0",
