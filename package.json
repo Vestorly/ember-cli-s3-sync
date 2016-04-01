@@ -52,6 +52,7 @@
     "dargs": "2.1.0",
     "extend": "2.0.0",
     "mime": "1.2.11",
+    "pleasant-progress": "^1.1.0",
     "readdirp": "1.1.0",
     "requiring": "0.0.3",
     "rsvp": "3.0.14",
